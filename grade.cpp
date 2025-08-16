@@ -22,3 +22,32 @@ bool process(int score) {
         return false; 
     }
 }
+void grade(int score) {
+    if (score >= 80) {
+        cout << "Grade A" << endl;
+    } 
+    else if (score >= 60) {
+        cout << "Grade B" << endl;
+    } 
+    else if (score >= 50) {
+        cout << "Grade C" << endl;
+    } 
+    else {
+        cout << "Fail :( " << endl;
+    }
+}
+void terminal() {
+    cout << "Scores validated." << endl;
+    
+}
+
+int main() {
+    int score = initialization();
+
+    if (process(score)) {
+        grade(score);
+        terminal();
+    }
+
+    return 0;
+}
